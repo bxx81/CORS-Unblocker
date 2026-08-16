@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "CORS Unblocker",
+  "version": "1.0.0",
+  "description": "Disables CORS blocking for user-configured API hosts.",
+  "icons": {
+    "16": "unblocker16.png",
+    "32": "unblocker32.png",
+    "48": "unblocker48.png",
+    "128": "unblocker128.png"
+  },
+  "permissions": ["declarativeNetRequestWithHostAccess", "storage"],
+  "host_permissions": ["https://*.narrative-sprout.pages.dev/*"],
+  "optional_host_permissions": ["https://*/*", "http://*/*"],
+  "action": {
+    "default_title": "CORS Unblocker",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "unblocker16.png",
+      "32": "unblocker32.png",
+      "48": "unblocker48.png"
+    }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
